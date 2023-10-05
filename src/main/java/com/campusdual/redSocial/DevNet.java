@@ -202,7 +202,8 @@ public class DevNet {
                     menuComentarios(post);
                 }
                 int option2 = Utils.integer("¿Quieres eliminar el post? (1: Sí, 2: No): ");
-                if (option == 1) { eliminarPost(post);
+
+            if (option2 == 1) { eliminarPost(post);
                     return;
                 }
 
@@ -246,7 +247,7 @@ public class DevNet {
 
             int option = Utils.integer("Selecciona una opción: ");
             if (option == 1) {
-                eliminarComentarios(post, String.valueOf(comentario));
+                post.eliminarComentarios(comentario);
                 return;
             }
     }
@@ -262,14 +263,13 @@ public class DevNet {
     }
 
 
-    public void eliminarComentarios(Post post, String comentario){
-        post.getCommentsList().remove(comentario);
-        System.out.println("Comentario eliminado");
-
-    }
 
 
-// Esto aún no va
+
+
+
+// Esto aún
+
          public void eliminarPost (Post post) {
         postList.remove(post);
         System.out.println("Post eliminado");

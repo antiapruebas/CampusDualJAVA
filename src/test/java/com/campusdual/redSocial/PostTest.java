@@ -28,6 +28,16 @@ class PostTest {
 
     }
 
+    @Test
+    @DisplayName("Comprobamos si se eliminan los comentarios correctamente")
+    void comentarioEliminadoTest(){
+        Post post1 = new Text("Primer post", Utils.obtenerFechaActual(), "Antía", "¿Qué tal vais?");
+        Comentarios comentario1 = new Comentarios("Antía", Utils.obtenerFechaActual(), "Yo también quiero");
+        post1.addComentario(comentario1);
+        assertEquals(1, post1.getCommentsList().size());
+        post1.eliminarComentarios(comentario1);
+        assertEquals(0, post1.getCommentsList().size());
+    }
 
 }
 

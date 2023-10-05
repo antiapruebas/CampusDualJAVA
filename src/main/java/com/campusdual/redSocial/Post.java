@@ -20,7 +20,7 @@ public abstract class Post {
 
     public Post(String idPost, String titlePost, List<Comentarios> commentsList, String datePost, String userName) {
         this.idPost = idPost;
-        titlePost = titlePost;
+        this.titlePost= titlePost;
         this.commentsList = commentsList;
         this.datePost = datePost;
         this.userName = userName;
@@ -72,10 +72,18 @@ public abstract class Post {
     }
 
 
+    /**El usuario añade un comentario en el post*/
 
     public void addComentario(Comentarios comentario1) {
         this.commentsList.add(comentario1);
 
     }
+ /**Eliminar comentario de un post*/
+    public void eliminarComentarios(Comentarios comentario){
+        this.commentsList.remove(comentario);
+        System.out.println("Comentario eliminado");
+
+    }
+
 }
 
