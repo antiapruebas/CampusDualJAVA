@@ -1,27 +1,29 @@
-package com.campusdual.Red_Social;
-
-import java.util.Date;
+package com.campusdual.redSocial;
 
 public class Comentarios{
-    protected double idcomment;
+
     protected String username;
     protected String dateComment;
     protected String comment;
 
-    public Comentarios(double idcomment, String username, String dateComment, String comment){
-        this.idcomment = idcomment;
-        this.username = username;
+    public Comentarios( String username, String dateComment, String comment){
+
+       this.username = username;
         this.dateComment = dateComment;
         this.comment = comment;
     }
 
-    public void setIdcomment(double idcomment) {
-        this.idcomment = idcomment;
+    @Override
+    public String toString() {
+        return "Comentarios:" +
+                "Usuario: " + username + '\'' +
+                " Fecha: " + dateComment + '\'' +
+                "Comentario: '" + comment + '\'' ;
     }
 
-    public double getIdcomment() {
-        return idcomment;
-    }
+
+
+
 
     public void setUsername(String username) {
         this.username = username;

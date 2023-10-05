@@ -1,10 +1,10 @@
-package RedSocial;
+package com.campusdual.redSocial;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-import static RedSocial.Usuario.postList;
+import static com.campusdual.redSocial.Usuario.postList;
 import static java.lang.System.exit;
 
 public class DevNet {
@@ -239,14 +239,14 @@ public class DevNet {
     }
     public void verComentarios(Post post) {
         System.out.println("Comentarios de '" + post.getTitlePost() + "':");
-        for (String comentario : post.getCommentsList()) {
+        for (Comentarios comentario : post.getCommentsList()) {
             System.out.println(comentario);
 
             System.out.println("Quieres borrar este comentario? 1.Sí 2.No");
 
             int option = Utils.integer("Selecciona una opción: ");
             if (option == 1) {
-                eliminarComentarios(post, comentario);
+                eliminarComentarios(post, String.valueOf(comentario));
                 return;
             }
     }
@@ -261,11 +261,14 @@ public class DevNet {
 
     }
 
- public void eliminarComentarios(Post post, String comentario){
+
+    public void eliminarComentarios(Post post, String comentario){
         post.getCommentsList().remove(comentario);
         System.out.println("Comentario eliminado");
 
-         }
+    }
+
+
 // Esto aún no va
          public void eliminarPost (Post post) {
         postList.remove(post);

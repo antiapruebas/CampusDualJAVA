@@ -1,6 +1,6 @@
 package com.campusdual.ejercicioAlmacenamiento;
 
-import com.campusdual.Red_Social.Utils;
+import com.campusdual.redSocial.Utils;
 
 
 public class Ejercicio {

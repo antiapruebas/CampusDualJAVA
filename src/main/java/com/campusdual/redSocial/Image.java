@@ -1,4 +1,4 @@
-package RedSocial;
+package com.campusdual.redSocial;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ public class Image extends Post {
         this.width = width;
     }
 
-    public Image(String idPost, String titlePost, List<String> commentsList, String datePost, String userName, double height, double width) {
+    public Image(String idPost, String titlePost, List<Comentarios> commentsList, String datePost, String userName, double height, double width) {
         super(idPost, titlePost, commentsList, datePost, userName);
         this.height = height;
         this.width = width;

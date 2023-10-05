@@ -1,4 +1,4 @@
-package RedSocial;
+package com.campusdual.redSocial;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ public abstract class Post {
     protected String idPost;
 
     protected  String titlePost;
-    protected  List<String> commentsList = new ArrayList<>();
+    protected  List<Comentarios> commentsList = new ArrayList<>();
     protected String datePost;
     protected String userName;
 
@@ -18,7 +18,7 @@ public abstract class Post {
         this.userName = userName;
     }
 
-    public Post(String idPost, String titlePost, List<String> commentsList, String datePost, String userName) {
+    public Post(String idPost, String titlePost, List<Comentarios> commentsList, String datePost, String userName) {
         this.idPost = idPost;
         titlePost = titlePost;
         this.commentsList = commentsList;
@@ -34,9 +34,6 @@ public abstract class Post {
         return titlePost;
     }
 
-    public List<String> getCommentsList() {
-        return commentsList;
-    }
 
 
     public void setIdPost(String idPost) {
@@ -53,7 +50,12 @@ public abstract class Post {
 
         this.titlePost = titlePost;
     }
-    public void setCommentsList(List<String> commentsList) {
+
+    public List<Comentarios> getCommentsList() {
+        return commentsList;
+    }
+
+    public void setCommentsList(List<Comentarios> commentsList) {
         this.commentsList = commentsList;
     }
 
@@ -72,7 +74,7 @@ public abstract class Post {
 
 
     public void addComentario(Comentarios comentario1) {
-        this.commentsList.add(String.valueOf(comentario1));
+        this.commentsList.add(comentario1);
 
     }
 }

@@ -1,9 +1,6 @@
-package com.campusdual.Red_Social;
+package com.campusdual.redSocial;
 
 import java.util.List;
-import java.util.Date;
-
-import com.campusdual.Red_Social.Post;
 
 public class Text extends Post {
     protected String bodyPost;
@@ -14,7 +11,7 @@ public class Text extends Post {
         this.bodyPost = bodyPost;
     }
 
-    public Text(String idPost, String titlePost, List<String> commentsList, String datePost, String userName, String bodyPost) {
+    public Text(String idPost, String titlePost, List<Comentarios> commentsList, String datePost, String userName, String bodyPost) {
         super(idPost, titlePost, commentsList, datePost, userName);
         this.bodyPost = bodyPost;
     }

@@ -1,13 +1,13 @@
-package com.campusdual.Red_Social;
+package com.campusdual.redSocial;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
-import java.util.Date;
 
 public class Utils {
 

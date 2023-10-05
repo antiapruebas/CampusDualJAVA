@@ -1,4 +1,4 @@
-package RedSocial;
+package com.campusdual.redSocial;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +15,7 @@ public class Usuario {
     public Usuario(String name, List<Usuario> followList, List<Post> postList) {
         this.userName = name;
         this.followList = followList;
-        this.postList = postList;
+        Usuario.postList = postList;
     }
 
     public static void add(Usuario nuevoUsuario) {
@@ -38,8 +38,8 @@ public class Usuario {
     public static void remove(Usuario usuario) {
         String nombreUsuario = usuario.getName();
 
-        if (DevNet.userList.contains(nombreUsuario)) {
-            DevNet.userList.remove(nombreUsuario);
+        if (DevNet.userList.contains(usuario)) {
+            DevNet.userList.remove(usuario);
             System.out.println("Usuario " + nombreUsuario + " eliminado");
         } else {
             System.out.println("El usuario no está registrado");
@@ -79,7 +79,7 @@ public class Usuario {
     }
 
     public  void addPost2(Post post) {
-        this.postList.add(post);
+        postList.add(post);
         }
 
 
@@ -92,10 +92,11 @@ public class Usuario {
         Usuario penedo = new Usuario ("Penedo");
 
 
-        Usuario.add2(antia );
+        Usuario.add2(antia);
         Usuario.add2(nestor);
         Usuario.add2(jose);
         Usuario.add2(penedo);
+        Usuario.add2(pedro);
 
 
         Post post1 = new Text("Primer post", Utils.obtenerFechaActual(), "Antía", "¿Qué tal vais?");

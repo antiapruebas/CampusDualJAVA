@@ -13,7 +13,7 @@ public class Ejercicio4 {
 
         public static void sumaPares(){
             int resultado = 2+4+6+8+10+12+14+16+18+20+22+24+26+28+30+32+34+36+38+40;
-            System.out.println("El resultado de la suma de los numeros pares hasta el 40 es  " + resultado);
+            System.out.println("El resultado de la suma de los números pares hasta el 40 es  " + resultado);
         }
 
 
@@ -24,7 +24,7 @@ public class Ejercicio4 {
 
 
         int resultado20 = 2+4+6+8+10+12+14+16+18+20+22+24+26+28+30+32+34+36+38+40;
-        System.out.println("El resultado de la suma de los numeros pares hasta el 40 es  " + resultado20);
+        System.out.println("El resultado de la suma de los números pares hasta el 40 es  " + resultado20);
 
         sumaPares();
 

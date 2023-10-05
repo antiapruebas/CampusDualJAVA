@@ -1,4 +1,4 @@
-package RedSocial;
+package com.campusdual.redSocial;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ public class Video extends Post {
         this.duration = duration;
     }
 
-    public Video(String idPost, String titlePost, List<String> commentsList, String datePost, String userName, double quality, double duration) {
+    public Video(String idPost, String titlePost, List<Comentarios> commentsList, String datePost, String userName, double quality, double duration) {
         super(idPost, titlePost, commentsList, datePost, userName);
         this.quality = quality;
         this.duration = duration;
